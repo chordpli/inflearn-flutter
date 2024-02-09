@@ -44,6 +44,12 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print('click');
+        },
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
