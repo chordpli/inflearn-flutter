@@ -38,7 +38,10 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Text(
           '0',
-          style: TextStyle(color: Colors.red, fontSize: 20),
+          style: TextStyle(
+            color: Colors.red,
+            fontSize: 20,
+          ),
         ),
       ),
     );
