@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+// CamelCase (낙타형) -> 클래스
+// snake_case (뱀형) -> 파일명
+// 변수, 메서드, 함수는 소문자로 시작
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
