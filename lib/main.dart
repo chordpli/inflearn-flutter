@@ -55,6 +55,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontSize: 70,
               ),
             ),
+            ElevatedButton(
+              onPressed: () {
+                print('elecated');
+              },
+              child: Text('ElevatedButton'),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: Text('Text Button'),
+            ),
+            OutlinedButton(
+              onPressed: () {},
+              child: Text('OutlineButton'),
+            ),
           ],
         ),
       ),
