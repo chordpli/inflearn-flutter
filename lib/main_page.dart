@@ -12,6 +12,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int count = 0;
+
   // build 함수 바깥쪽의 값을 변경했을 떄에는 hot reload가 아닌 hot restart를 사용한다.
   // 그 외에도 값을 변경했을 때, 바뀌지 않는다면 그냥 다시 run한다.
   @override
@@ -51,6 +52,15 @@ class _MainPageState extends State<MainPage> {
             OutlinedButton(
               onPressed: () {},
               child: Text('OutlineButton'),
+            ),
+            TextField(
+              decoration: InputDecoration(
+                labelText: '글자를 입력해주세요.',
+                border: OutlineInputBorder(),
+              ),
+              onChanged: (text) {
+                print(text);
+              },
             ),
           ],
         ),
