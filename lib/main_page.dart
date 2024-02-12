@@ -22,71 +22,87 @@ class _MainPageState extends State<MainPage> {
         title: Text('홈'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              color: Colors.red,
-              width: 100,
-              height: 100,
-            ),
-            SizedBox(height: 30), // Container로 주는 것보다 성능상 우위를 갖는다.
-            Text(
-              '숫자',
-              style: TextStyle(
-                color: Colors.blue,
-                fontSize: 40,
-              ),
-            ),
-            Text(
-              '$count',
-              style: TextStyle(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
                 color: Colors.red,
-                fontSize: 70,
+                width: 100,
+                height: 100,
               ),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                print('elecated');
-              },
-              child: Text('ElevatedButton'),
-            ),
-            TextButton(
-              onPressed: () {},
-              child: Text('Text Button'),
-            ),
-            OutlinedButton(
-              onPressed: () {},
-              child: Text('OutlineButton'),
-            ),
-            TextField(
-              decoration: InputDecoration(
-                labelText: '글자를 입력해주세요.',
-                border: OutlineInputBorder(),
-              ),
-              onChanged: (text) {
-                print(text);
-              },
-            ),
-            Image.network(
-              'https://img.freepik.com/premium-photo/wall-papers-energy-flow-background-cool-wallpapers-cute-wallpapers-cool-background-phone-wallpaper_947865-667.jpg',
-              width: 100,
-              height: 100,
-              fit: BoxFit.cover,
-            ),
-            Container(
-              color: Colors.red,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset(
-                  'assets/image.jpeg',
-                  width: 100,
-                  height: 100,
-                  fit: BoxFit.cover,
+              SizedBox(height: 100), // Container로 주는 것보다 성능상 우위를 갖는다.
+              Text(
+                '숫자',
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 40,
                 ),
               ),
-            ),
-          ],
+              Text(
+                '$count',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 70,
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  print('elecated');
+                },
+                child: Text('ElevatedButton'),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: Text('Text Button'),
+              ),
+              OutlinedButton(
+                onPressed: () {},
+                child: Text('OutlineButton'),
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    flex: 3,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: '글자를 입력해주세요.',
+                        border: OutlineInputBorder(),
+                      ),
+                      onChanged: (text) {
+                        print(text);
+                      },
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text('login'),
+                    ),
+                  ),
+                ],
+              ),
+              Image.network(
+                'https://img.freepik.com/premium-photo/wall-papers-energy-flow-background-cool-wallpapers-cute-wallpapers-cool-background-phone-wallpaper_947865-667.jpg',
+                width: 100,
+                height: 100,
+                fit: BoxFit.cover,
+              ),
+              Container(
+                color: Colors.red,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset(
+                    'assets/image.jpeg',
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
