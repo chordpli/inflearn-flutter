@@ -25,6 +25,11 @@ class _MainPageState extends State<MainPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Container(
+              color: Colors.red,
+              width: 100,
+              height: 100,
+            ),
             Text(
               '숫자',
               style: TextStyle(
@@ -61,6 +66,24 @@ class _MainPageState extends State<MainPage> {
               onChanged: (text) {
                 print(text);
               },
+            ),
+            Image.network(
+              'https://img.freepik.com/premium-photo/wall-papers-energy-flow-background-cool-wallpapers-cute-wallpapers-cool-background-phone-wallpaper_947865-667.jpg',
+              width: 100,
+              height: 100,
+              fit: BoxFit.cover,
+            ),
+            Container(
+              color: Colors.red,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset(
+                  'assets/image.jpeg',
+                  width: 100,
+                  height: 100,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
           ],
         ),
