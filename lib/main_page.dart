@@ -30,6 +30,7 @@ class _MainPageState extends State<MainPage> {
               width: 100,
               height: 100,
             ),
+            SizedBox(height: 30), // Container로 주는 것보다 성능상 우위를 갖는다.
             Text(
               '숫자',
               style: TextStyle(
